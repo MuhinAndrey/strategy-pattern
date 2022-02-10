@@ -11,7 +11,7 @@ namespace DucksLyb
     {
         public string Quack()
         {
-            return "";
+            return "Не квакает";
         }
     }
 }

@@ -11,7 +11,7 @@ namespace DucksLyb
     {
         public string Fly()
         {
-            return "";
+            return "Не летает";
         }
     }
 }
