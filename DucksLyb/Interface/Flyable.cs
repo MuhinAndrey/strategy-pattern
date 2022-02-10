@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DucksLyb.Interface
 {
-    public interface IFlyable
+    public interface IFlyBehavior
     {
         string Fly();
 

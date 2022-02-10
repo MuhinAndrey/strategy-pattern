@@ -10,7 +10,7 @@ namespace DucksLyb
     {
         public override string Display()
         {
-            return "Display" + " " + this.GetType();
+            return $"{this.GetType()}{flyBehavior.GetType()}{quackBehavior.GetType()}";
         }
     }
 }

@@ -17,18 +17,31 @@ namespace Utky
             RubberDuck rubberDuck = new RubberDuck();
             DecoyDuck decoyDuck = new DecoyDuck();
 
+            IFlyBehavior flywithwings = new FlyWithWings();
+            IFlyBehavior flynoway = new FlyNoWay();
+
+            IQuackBehavior dquack = new DQuack();
+            IQuackBehavior squeak = new Squeak();
+            IQuackBehavior mutequack = new MuteQuack();
+
+            mallardDuck.setFlyBehavior(flywithwings);
+            mallardDuck.setQuackBehavior(dquack);
+
+            redheadDuck.setFlyBehavior(flywithwings);
+            redheadDuck.setQuackBehavior(dquack);
+
+            rubberDuck.setFlyBehavior(flynoway);
+            rubberDuck.setQuackBehavior(squeak);
+
+            decoyDuck.setFlyBehavior(flynoway);
+            decoyDuck.setQuackBehavior(mutequack);
+
             Duck[] ducks = new Duck[] { mallardDuck, redheadDuck, rubberDuck, decoyDuck };
 
             for ( int i = 0; i < ducks.Length; i++ )
             {
-                if (ducks[i] is IQuackable)
-                {
-                    Console.WriteLine((ducks[i] as IQuackable).Quack());
-                }
-                if (ducks[i] is IFlyable)
-                {
-                    Console.WriteLine((ducks[i] as IFlyable).Fly());
-                }
+                Console.WriteLine(ducks[i].PerformQuack());
+                Console.WriteLine(ducks[i].PerformFly());
                 Console.WriteLine(ducks[i].Swim());
                 Console.WriteLine(ducks[i].Display());
                 Console.WriteLine();

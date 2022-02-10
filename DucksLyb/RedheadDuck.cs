@@ -7,7 +7,7 @@ using DucksLyb.Interface;
 
 namespace DucksLyb
 {
-    public class RedheadDuck : Duck, IQuackable, IFlyable
+    public class RedheadDuck : Duck, IQuackBehavior, IFlyBehavior
     {
         public override string Display()
         {

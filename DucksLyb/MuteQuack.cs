@@ -7,11 +7,11 @@ using DucksLyb.Interface;
 
 namespace DucksLyb
 {
-    public class RubberDuck : Duck
+    public class MuteQuack : IQuackBehavior
     {
-        public override string Display()
+        public string Quack()
         {
-            return $"{this.GetType()}{flyBehavior.GetType()}{quackBehavior.GetType()}";
+            return "";
         }
     }
 }
