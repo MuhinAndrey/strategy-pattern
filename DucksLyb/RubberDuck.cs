@@ -7,19 +7,15 @@ using DucksLyb.Interface;
 
 namespace DucksLyb
 {
-    public class MallardDuck : Duck, IQuackable, IFlyable
+    public class RubberDuck : Duck, IQuackable
     {
         public override string Display()
         {
             return "Display" + " " + this.GetType();
         }
-        public string Quack()
+        public  string Quack()
         {
             return "Quack" + " " + this.GetType();
-        }
-        public string Fly()
-        {
-            return "Fly" + " " + this.GetType();
         }
     }
 }
